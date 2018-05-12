@@ -1,0 +1,93 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+}
+
+.Button {
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#myCheck {
+    visibility: hidden;
+}
+
+.btn {
+    border-radius: 5px;
+    height: 30px;
+    cursor: pointer;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.grid {
+    margin-top: 15px;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card {
+    border:  black 1px;
+    background-color: transparent;
+    position: relative;
+    top : 50px;
+    margin: 5px;
+    cursor: pointer;
+    height: 150px;
+    width: 200px;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+}
+
+
+.back,
+.front {
+    height: 150px;
+    width: 200px;
+}
+
+.back, .front {
+   position: absolute;
+   backface-visibility: hidden;
+}
+
+.front {
+    background: url('Images/256.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+  
+.card.flipped{
+    cursor: default;
+}
+
+.card.match {
+    transform: rotateY(180deg);
+    cursor: default;
+    height: 150px;
+    width: 200px;
+}
+
